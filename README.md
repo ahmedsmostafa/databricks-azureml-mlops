@@ -36,6 +36,15 @@ This Build Pipeline is using a feature called "[Multi-Stage Pipelines](https://d
 
 ## Connecting Azure Databricks
 
+### Connecting Azure Databricks Notebooks to the Azure DevOps *Repo*
+
+It is recommended to connect your notebooks to the Azure DevOps repo. This will ensure your changes & updates are pushed to the repo automatically and gets built properly. The pipeline is automatically triggered by any commit/push to the repo.
+
+To configure this, go to the "User Settings" and click on "Git Integration".
+![databricks and azure devops integration](./images/databricks-git-devops.png)
+
+### Connecting the Azure DevOps *pipeline* to Azure Databricks
+
 To be able to run this pipeline, you also need to connect your Azure Databricks Workspace with the pipeline.
 
 Therefore, yor first need to [generate an access token on Databricks](https://docs.azuredatabricks.net/dev-tools/api/latest/authentication.html#generate-a-token).
