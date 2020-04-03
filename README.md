@@ -26,6 +26,21 @@ As soon as you have access to the Azure DevOps platform, you're able to [create 
 
 As soon as this is created, you can [import this GitHub repository](https://docs.microsoft.com/en-us/azure/devops/repos/git/import-git-repository?view=azure-devops) into your Azure DevOps project.
 
+### Connecting Azure Databricks Notebooks to the Azure DevOps *Repo*
+
+It is recommended to connect your notebooks to the Azure DevOps repo. This will ensure your changes & updates are pushed to the repo automatically and gets built properly. The pipeline is automatically triggered by any commit/push to the repo.
+
+To configure this, go to the "User Settings" and click on "Git Integration".
+![databricks and azure devops integration](./images/databricks-git-devops.png)
+
+### Create MLFlow Experiment
+The Databricks notebooks use MLFlow under the hoods; in order to create the MLFlow experiment you need to do this after importing the notebooks in the Databricks workspace.
+![databricks mlflow experiment](./images/mlflow-experiment.png)
+
+Clicking on the above link will open a screen where you can specify the name of the experiment and its location on DBFS. For this demo, make sure the MLFlow experiment's name is DrinksQuality.
+![databricks mlflow creation](./images/mlflow-creation.png)
+
+
 ## Set up The Build Pipeline
 
 By importing the GitHub files, you also imported the [azure-pipelines.yml](./azure-pipelines.yml) file.
@@ -35,13 +50,6 @@ This file can be used to create your first Build Pipeline.
 This Build Pipeline is using a feature called "[Multi-Stage Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/stages?view=azure-devops&tabs=yaml)". This feature might not be enabled for you, so in order to use it, you should [enable this preview feature](https://docs.microsoft.com/en-us/azure/devops/project/navigation/preview-features?view=azure-devops).
 
 ## Connecting Azure Databricks
-
-### Connecting Azure Databricks Notebooks to the Azure DevOps *Repo*
-
-It is recommended to connect your notebooks to the Azure DevOps repo. This will ensure your changes & updates are pushed to the repo automatically and gets built properly. The pipeline is automatically triggered by any commit/push to the repo.
-
-To configure this, go to the "User Settings" and click on "Git Integration".
-![databricks and azure devops integration](./images/databricks-git-devops.png)
 
 ### Connecting the Azure DevOps *pipeline* to Azure Databricks
 
