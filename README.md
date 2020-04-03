@@ -42,7 +42,7 @@ Therefore, yor first need to [generate an access token on Databricks](https://do
 
 This token must be stored as encrypted secret in your Azure DevOps Build Pipeline...
 
-Please check ![Adding an Azure Pipeline Variable](./images/01AddingPipelineVariables.png "Adding an Azure Pipeline Variable")
+![Adding an Azure Pipeline Variable](./images/01AddingPipelineVariables.png "Adding an Azure Pipeline Variable")
 
 > NOTE: The variable must be called *databricks.token* as it is referenced within the pipeline YAML file.
 > NOTE: There are additional variables that need to be defined to ease the build & deployment operation. You're free to decide if those variables should be defined as secrets or text values.
