@@ -50,6 +50,8 @@ This file can be used to create your first Build Pipeline.
 
 This Build Pipeline is using a feature called "[Multi-Stage Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/stages?view=azure-devops&tabs=yaml)". This feature might not be enabled for you, so in order to use it, you should [enable this preview feature](https://docs.microsoft.com/en-us/azure/devops/project/navigation/preview-features?view=azure-devops).
 
+![Azure DevOps multi-stage-pipeline](./images/multi-stage-pipeline.png)
+
 ## Connecting Azure Databricks
 
 ### Connecting the Azure DevOps *pipeline* to Azure Databricks
