@@ -33,9 +33,12 @@ It is recommended to connect your notebooks to the Azure DevOps repo. This will 
 To configure this, go to the "User Settings" and click on "Git Integration". ![databricks and azure devops integration](./images/databricks-git-devops.png)
 
 ### Create MLFlow Experiment
-The Databricks notebooks use MLFlow under the hoods; in order to create the MLFlow experiment you need to do this after importing the notebooks in the Databricks workspace. ![databricks mlflow experiment](./images/mlflow-experiment.png)
+The Databricks notebooks use MLFlow under the hoods; in order to create the MLFlow experiment you need to do this after importing the notebooks in the Databricks workspace.
+
+![databricks mlflow experiment](./images/mlflow-experiment.png)
 
 Clicking on the above link will open a screen where you can specify the name of the experiment and its location on DBFS. For this demo, make sure the MLFlow experiment's name is DrinksQuality.
+
 ![databricks mlflow creation](./images/mlflow-creation.png)
 
 
