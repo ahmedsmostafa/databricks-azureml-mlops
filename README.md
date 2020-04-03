@@ -2,7 +2,7 @@
 
 This repo can be used as a tutorial for learning how to build DevOps for Machine Learning (also called MLOps) using Azure Databricks and Azure ML Services.
 
-The DevOps Pipelines are defined using the YAML file [azure-pipelines.yml](./azure-pipelines.yml) for Azure DevOps. There is a "partially working" version [main.yml](./.github/workflows/main.yml) for GitHub Actions (not yet fully tested).
+The DevOps Pipelines are defined using the YAML file [azure-pipelines.yml](./azure-pipelines.yml) for Azure DevOps. 
 
 ## Using This Sample Project
 
@@ -124,5 +124,14 @@ To avoid high costs from the Azure Kubernetes Service, which will be created by 
 This can be done in the Environments section of your Azure Pipelines.
 
 ![Azure Pipeline Environments](./images/Environments.png)
+
+## Issues & Take aways & TO DOs:
+
+- Notebooks should be configured to pull variables from Databricks Secrets
+- Notebooks secrets values should be defined in separate Secrets Scopes.
+  - Secret Scopes can be set to the same variable, is updated using Databricks CLI, from the Azure DevOps pipeline.
+- Manage AzureML workspace & Environments from within Azure DevOps pipeline instead of the Python SDK (within Databricks notebooks).
+- Use Databricks automated clusters (job clusters) instead of Interactive clusters.
+- Multi-Stage pipelines are very nice; but they might become harder to maintain. Think about separating your pipelines and connecting them together.
 
 _Disclaimer:_ This work is inspired by and based on efforts done by Sascha Dittman.
