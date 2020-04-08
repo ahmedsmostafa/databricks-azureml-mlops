@@ -6,11 +6,11 @@ This repo can be used as a tutorial for learning how to build DevOps for Machine
 
 The DevOps process within Azure can be summarized and shown in this diagram:
 
-    ![devopsops-overview](./images/mlops-overview.png)
+   ![devopsops-overview](./images/mlops-overview.png)
 
 This tutorial will walk you through how to implement ML Ops in the following general form:
 
-    ![mlops-simple](./images/mlops-simple.png)
+   ![mlops-simple](./images/mlops-simple.png)
 
 However this pipeline can apply to practically any big-data & analytics workload; not just machine learning modeling.
 
