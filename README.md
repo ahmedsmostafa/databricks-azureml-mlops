@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/ahmosta/MLOpsDatabricks/_apis/build/status/MLOpsDatabricks?branchName=master)](https://dev.azure.com/ahmosta/MLOpsDatabricks/_build/latest?definitionId=1&branchName=master)
+
 # MLOps demo for Azure Databricks and AzureML SDK
 
 This repo can be used as a tutorial for learning how to build DevOps for Machine Learning (also called MLOps) using Azure Databricks and Azure ML Services.
