@@ -7,9 +7,9 @@ Operationalizing Data Analytics and Machine Learning workloads can be challengin
 
 This repo demonstrates an approach of implementing DevOps pipelines for large-scale Data Analytics and Machine Learning (also called Data/MLOps) using a combination of [Azure Databricks](https://azure.microsoft.com/en-us/services/databricks/), [MLFlow](http://mlflow.org), and [AzureML](https://azure.microsoft.com/en-us/services/machine-learning/).
 
-The DebvOps pipeline is implemented in [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/), and it deploys the workload in a containerized form simulating staging & production environments to [Azure Container Services](https://azure.microsoft.com/en-us/product-categories/containers/) and [Azure Kubernetes Services](https://azure.microsoft.com/en-us/services/kubernetes-service/).
+The DevOps pipeline is implemented in [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/), and it deploys the workload in a containerized form simulating staging & production environments to [Azure Container Services](https://azure.microsoft.com/en-us/product-categories/containers/) and [Azure Kubernetes Services](https://azure.microsoft.com/en-us/services/kubernetes-service/).
 
-The DevOps process within Azure can be summarized and shown in the diagram below; such that build pipelines build the project's artifacts followed by a testing & release process. The DevOps pipeline deploys the built artifacts in one or more environments. This process can be automated to speed up development of projects (as well as of analytics & ML workloads). 
+The diagram below shows a high-level overview of a generic DevOps process;  that build pipelines build the project's artifacts followed by a testing & release process. The DevOps pipeline deploys the built artifacts in one or more environments. This process can be automated to speed up development of projects (as well as of analytics & ML workloads). 
 
    ![mlops-full](./images/mlops-full.png)
 
