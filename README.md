@@ -9,19 +9,36 @@ This repo demonstrates an approach of implementing DevOps pipelines for large-sc
 
 The DevOps pipeline is implemented in [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/), and it deploys the workload in a containerized form simulating staging & production environments to [Azure Container Services](https://azure.microsoft.com/en-us/product-categories/containers/) and [Azure Kubernetes Services](https://azure.microsoft.com/en-us/services/kubernetes-service/).
 
-The diagram below shows a high-level overview of a generic DevOps process;  that build pipelines build the project's artifacts followed by a testing & release process. The DevOps pipeline deploys the built artifacts in one or more environments. This process can be automated to speed up development of projects (as well as of analytics & ML workloads). 
+The diagram below shows a high-level overview of a generic DevOps process;  that build pipelines build the project's artifacts followed by a testing & release process. such process enables faster deployment for modules without impacting the overall system as well as the flexibility to deploy to one or more environments.
 
    ![mlops-full](./images/mlops-full.png)
 
-This tutorial will walk you through how to implement ML Ops in the following general form:
+This tutorial fits ML as well as DataOps workloads, to simplify things it will walk you through how to implement Data/ML Ops in the following general form:
 
    ![mlops-simple](./images/mlops-simple.png)
 
-Such MLOps pipelines can apply to practically any big-data & analytics workload; not just machine learning modeling. This tutorial however will focus on building such Azure DevOps pipelines with specific integration to Azure Databricks.
 
-   ![mlops-databricks](./images/mlops-databricks.png)
+## Why Azure Databricks?
+Azure Databricks offers great capabilities for developing & building analytics & ML workloads for data ingestion, data engineering, and data science for various applications (e.g. Data Management, Batch processing, Stream processing, Graph processing, and distributed machine learning). 
 
-This tutorial demos also how Databricks notebooks leverage both MLFlow as well as Azure ML SDK to publish the workloads to the container registry and deploy it afterwards to Azure Container Instances and Azure Kubernetes Services.
+Such capabilities are offered in a unified experience for collaboration between the different team stakeholders; supporting writing code in Scala, Python, SQL, and R and writing standard as well as Apache Spark applications.
+
+Additionally, the platform provides a very convenient infrastructure management layer:
+- Deploying workloads to highly scalable clusters is very easy.
+- Clusters can be configured to auto-scale to adapt to the processing workload.
+- Clusters can be set to work in an epheremal way; clusters will automatically terminate once a job is done; or no activity. This feature adds great value for managing costs.
+- Databricks supports running containers through [Databricks Container Services](https://docs.microsoft.com/en-us/azure/databricks/clusters/custom-containers)
+
+Such execution capabilities makes Azure Databricksa great fit, not only for developing & building workloads, but also for running such workloads and serving Data as well.
+
+## Why Azure ML and MLFlow?
+This tutorial demonstrates also how Databricks Notebooks can leverage MLFlow and Azure ML, while they can be seen similar, but their usage & application shine depends on where they're used.
+
+MLFlow is natively supported within Databricks, as MLFlow manages the machine learning experiment and the runs within the Databricks workspace development environment. Therefore, it conviently offers data scientists & engineers with such ML management and tracking capability for their models without having to leave their development environment.
+
+The integration between MLFlow and AzureML however provides such management across environments, and AzureML is eventually used - from within the MLFlow Experiment - to build a Docker container image for the best scored model, and publish such workload(s) to the Azure container registry, and deploy it afterwards to either Azure Container Instances and Azure Kubernetes Services.
+
+![mlops-databricks](./images/mlops-databricks.png)
 
 ## Using This Sample Project
 
