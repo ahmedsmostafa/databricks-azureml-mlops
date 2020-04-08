@@ -1,10 +1,15 @@
 [![Build Status](https://dev.azure.com/ahmosta/MLOpsDatabricks/_apis/build/status/MLOpsDatabricks?branchName=master)](https://dev.azure.com/ahmosta/MLOpsDatabricks/_build/latest?definitionId=1&branchName=master)
 
-# MLOps demo for Azure Databricks and AzureML SDK
+# Large-scale Data/MLOps with Azure & Databricks
+## How to implement DataOps/MLOps using Azure Devops, Databricks, MLFlow, Azure ML
 
-This repo can be used as a tutorial for learning how to build DevOps for Machine Learning (also called MLOps) using Azure Databricks and Azure ML Services.
+Operationalizing Data Analytics and Machine Learning workloads can be challenging; because the ecosystem of platforms and services involved used to build such workloads is big; which increases the complexity of deploying such workloads to production. The complexity also increases with the continous adoption of running in containers and using container orchestration frameworks such as Kubernetes.
 
-The DevOps process within Azure can be summarized and shown in the diagram below; such that; a build pipeline builds all project's artifacts followed by a testing & release process where the artifacts get deployed in one or more environments. This process can be automated to speed up development of projects (as well as of analytics & ML workloads). 
+This repo demonstrates an approach of implementing DevOps pipelines for large-scale Data Analytics and Machine Learning (also called Data/MLOps) using a combination of [Azure Databricks](https://azure.microsoft.com/en-us/services/databricks/), [MLFlow](http://mlflow.org), and [AzureML](https://azure.microsoft.com/en-us/services/machine-learning/).
+
+The DebvOps pipeline is implemented in [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/), and it deploys the workload in a containerized form simulating staging & production environments to [Azure Container Services](https://azure.microsoft.com/en-us/product-categories/containers/) and [Azure Kubernetes Services](https://azure.microsoft.com/en-us/services/kubernetes-service/).
+
+The DevOps process within Azure can be summarized and shown in the diagram below; such that build pipelines build the project's artifacts followed by a testing & release process. The DevOps pipeline deploys the built artifacts in one or more environments. This process can be automated to speed up development of projects (as well as of analytics & ML workloads). 
 
    ![mlops-full](./images/mlops-full.png)
 
