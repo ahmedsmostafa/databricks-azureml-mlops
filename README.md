@@ -4,16 +4,23 @@
 
 This repo can be used as a tutorial for learning how to build DevOps for Machine Learning (also called MLOps) using Azure Databricks and Azure ML Services.
 
+The DevOps process within Azure can be summarized and shown in this diagram:
+
+    ![devopsops-overview](./images/mlops-overview.png)
+
 This tutorial will walk you through how to implement ML Ops in the following general form:
-![mlops-simple](./images/mlops-simple.png)
+
+    ![mlops-simple](./images/mlops-simple.png)
 
 However this pipeline can apply to practically any big-data & analytics workload; not just machine learning modeling.
 
-The DevOps Pipeline is a "multi-staged" pipeline and it is defined using the YAML file [azure-pipelines.yml](./azure-pipelines.yml) for Azure DevOps. 
+To tailor the process to Azure; a DevOps 
 
 ## Using This Sample Project
 
-If you want to run this example in Azure DevOps, you need to prepare you enviroment with the following steps.
+This repo is configured to run and use Azure DevOps, therefore you need to prepare you enviroment with the following steps.
+
+The DevOps Pipeline is a "multi-staged" pipeline and it is defined using the YAML file [azure-pipelines.yml](./azure-pipelines.yml) for Azure DevOps. 
 
 ## Required Accounts And Resources
 
