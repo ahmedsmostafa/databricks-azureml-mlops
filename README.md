@@ -11,7 +11,7 @@ The DevOps pipeline is implemented in [Azure DevOps](https://azure.microsoft.com
 
 The diagram below shows a high-level overview of a generic DevOps process;  that build pipelines build the project's artifacts followed by a testing & release process. such process enables faster deployment for modules without impacting the overall system as well as the flexibility to deploy to one or more environments.
 
-   ![mlops-full](./images/mlops-full.png)
+   ![mlops-full](/images/mlops-full.png)
 
 This tutorial fits ML as well as DataOps workloads, to simplify things it will walk you through how to implement Data/ML Ops in the following general form:
 
